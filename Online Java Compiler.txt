@@ -1,0 +1,26 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+        int a=3,b=10;
+        int c=4,d=15;
+        int ans=19;
+        int price=0;
+       
+        int min=Integer.MAX_VALUE;
+       for(int i=0;a*i<=ans;i++)
+             {
+                    int rem=ans-i*a;
+                    if(rem%c==0)
+                    {
+                         int cost=b*i+d*(rem/c);
+                         min=(cost<min || min==-1)?cost:min;
+                     }
+              }
+               if(min!=-1)
+                    System.out.println(min);
+        System.out.println("price need "+min);
+    }
+}
